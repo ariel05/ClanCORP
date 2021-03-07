@@ -1,0 +1,180 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="layout/layout :: head">
+  <meta charset="utf-8" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+	<div th:replace="layout/layout :: navbar-left"></div>
+
+    <div class="main-panel">
+      <!-- Navbar -->
+	  <nav th:replace="layout/layout :: navbar-top"></nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Registro para Liga CORP</h4>
+                  <p>Febrero 2021<br>
+					Bienvenido a la CORP LEAGUE, recuerda que los valores de esta liga es ejercitar la competitividad, buen ambiente y conocernos entre todos los miembros del clan. <br>
+					La idea es que la armonía y la excelencia se unan.<br>
+					<Strong>Voobly: </Strong> Si no eres del CORP pero quieres participar con gusto puedes mandar tu solicitud al clan! Aceptamos todos los niveles! https://corporacionaoe.voobly.com<br>
+					<Strong>Definitive Edition:</Strong> Recomendamos que tengan al menos 10 partidas ranked 1 vs 1 para que puedan aparecer y ser buscados en <strong>https://aoe2.net/#aoe2de-leaderboard-rm-1v1</strong>.<br>
+					Si tienes algún problema, comentario, sugerencia o recomendación, contacta con OOSS, ONYX, EDWALL, OMAR, MASSA que con gusto atenderemos todo lo que necesiten.
+				 </p>
+                  <p class="card-category">Complete los datos según la plataforma en la que juega (Voobly o DE)</p>
+                </div>
+                <div class="card-body">
+ 				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
+ 				  <select name="cars" class="custom-select bmd-label-floating">
+				    <option selected value="">Seleccione plataforma</option>
+				    <option value="voobly">Voobly</option>
+				    <option value="DE">Definitive Edition</option>
+				  </select>
+				<form id="definitiveEdition">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">¿Cual es tu nick en el DE?</label>
+                          <input type="text" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+		 				  <select name="cars" class="custom-select bmd-label-floating" required>
+						    <option selected value="">Seleccione Liga según su rated</option>
+						    <option value="01">Liga MIlicia / Arquero 701 - 900</option>
+						    <option value="02">Liga Scout 901 - 1100</option>
+						    <option value="03">Liga Ballestero 1101 - 1200</option>
+						    <option value="04">Liga Jinete 1201 - 1300</option>
+						    <option value="05">Liga Arbalesta 1301 - 1500</option>
+						    <option value="06">Liga Paladin 15++/en adelante</option>
+						  </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Teléfono</label>
+                          <input type="email" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Link de AOE2.net </label>
+                          <input type="text" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                          <label class="bmd-label-floating">
+                          	Tienes el tiempo suficiente para jugar la LIGA CORP, 
+                          	asumiendo que debes jugar 3 partidas por jugador (media 18 - 24 games en un lapso de 3 semanas)
+                          	 Esto es un compromiso con apercibimiento de suspensión en caso de no jugar el 70% de las partidas.
+                          </label><br>
+							<div class="form-check form-check-inline">
+								<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
+							</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Instructivo para conseguir links de perfiles de <a href="https://aoe2.net/#aoe2de-leaderboard-rm-1v1" target="blank">https://aoe2.net/#aoe2de-leaderboard-rm-1v1</a></label>
+                          <div class="form-group">
+							<img src="img/instructivo.png" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Opinión personal</label>
+                          <div class="form-group">
+                            <label class="bmd-label-floating"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Registrarme</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	<div class="container mt-3">
+	  <h2>Modal Example</h2>
+	  <!-- Button to Open the Modal -->
+	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	    Open modal
+	  </button>
+	
+	  <!-- The Modal -->
+	  <div class="modal fade" id="myModal">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	      
+	        <!-- Modal Header -->
+	        <div class="modal-header">
+	          <h4 class="modal-title">Registro completo</h4>
+	          <button type="button" class="close" data-dismiss="modal">×</button>
+	        </div>
+	        
+	        <!-- Modal body -->
+	        <div class="modal-body">
+					<p>
+						Gracias por inscribirte, esperamos que tengas una gran liga! 
+						Y a jugar mucho! Adicionalmente tenemos un vídeo de como se juega la liga Corp, 
+						es muy importante que lo vean y aprendan el como se reportan las partidas!<br>
+						 https://www.youtube.com/watch?v=N9EvOHcYfdw - Estate atento! 
+						 Recibirás un la información sobre las brackets y el reglamento en los próximos días. GGWP GL HF!
+					</p>
+					<img src="img/liga-logo.jpg" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
+	        </div>
+	        
+	        <!-- Modal footer -->
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	        </div>
+	        
+	      </div>
+	    </div>
+	  </div>
+	  
+	</div>
+
+
+	<footer th:replace="layout/layout :: footer-pie"></footer>
+    </div>
+  </div>
+
+</body>
+  <!--   Core JS Files   -->
+<body th:replace="layout/layout :: import-script"></body>
+
+</html>

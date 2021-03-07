@@ -25,6 +25,6 @@ public class IndexController {
 	@RequestMapping("/formulario")
 	public String goToForm(Model model) {
 		model.addAttribute("isForm", true);
-		return "user";
+		return "form";
 	}
 }
