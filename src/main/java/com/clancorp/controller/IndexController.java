@@ -10,7 +10,7 @@ public class IndexController {
 	@RequestMapping("/")
 	public String goToIndex(Model model) {
 		model.addAttribute("isIndex", true);
-		return "dashboard";
+		return "index";
 	}
 	@RequestMapping("/notificaciones")
 	public String goToNotifications(Model model) {

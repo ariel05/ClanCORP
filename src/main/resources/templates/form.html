@@ -12,8 +12,10 @@ The above copyright notice and this permission notice shall be included in all c
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
 
-<head  th:replace="layout/layout :: head">
-  <meta charset="utf-8" />
+<head  th:replace="layout/layout :: head"></head>
+<head>
+	<meta charset="utf-8" />
+	<title>Formulario de inscripción a liga Corp</title>
 </head>
 
 <body class="">
@@ -42,12 +44,12 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
                 <div class="card-body">
  				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
- 				  <select name="cars" class="custom-select bmd-label-floating">
+ 				  <select name="cars" class="custom-select bmd-label-floating selectFormCorp">
 				    <option selected value="">Seleccione plataforma</option>
 				    <option value="voobly">Voobly</option>
 				    <option value="DE">Definitive Edition</option>
 				  </select>
-				<form id="definitiveEdition">
+				<form id="formDE" style="display:none">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
@@ -120,6 +122,71 @@ The above copyright notice and this permission notice shall be included in all c
                     <button type="submit" class="btn btn-primary pull-right">Registrarme</button>
                     <div class="clearfix"></div>
                   </form>
+                  <!-- ----------------------------------------------------------------------------------------- -->
+                  <!-- ----------------------------------------------------------------------------------------- -->
+                  <!-- ----------------------------------------------------------------------------------------- -->
+                  <!-- ----------------------------------------------------------------------------------------- -->
+                  <!-- ----------------------------------------------------------------------------------------- -->
+				<form id="formVoobly" style="display:none">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">¿Cual es tu nick en voobly?</label>
+                          <input type="text" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+		 				  <select name="cars" class="custom-select bmd-label-floating" required>
+						    <option selected value="">Seleccione Liga según su rated</option>
+						    <option value="01">Liga Scout 13++/o menos</option>
+						    <option value="02">Liga Jinete 14++</option>
+						    <option value="03">Liga Paladin 16++/en adelante</option>
+						  </select>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Teléfono</label>
+                          <input type="email" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Link de tu perfil de voobly (Ej. https://www.voobly.com/profile/view/124734139)</label>
+                          <input type="text" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                          <label class="bmd-label-floating">
+							¿Te comprometes a jugar todos tus juegos y partidas, como también te comprometes a jugar honrada y 
+							respetuosamente como integrante del Clan Corp? <br>
+							Si eres nuevo en al liga y te comprometiste a jugar pero no lo cumples, es probable que seas penalizado
+                          </label><br>
+							<div class="form-check form-check-inline">
+								<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
+							</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label>Opinión personal</label>
+                          <div class="form-group">
+                            <label class="bmd-label-floating"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
+                            <textarea class="form-control" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Registrarme</button>
+                    <div class="clearfix"></div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -155,6 +222,7 @@ The above copyright notice and this permission notice shall be included in all c
 						 Recibirás un la información sobre las brackets y el reglamento en los próximos días. GGWP GL HF!
 					</p>
 					<img src="img/liga-logo.jpg" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
+					<img src="img/liga-logo-voobly.png" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
 	        </div>
 	        
 	        <!-- Modal footer -->
@@ -176,5 +244,25 @@ The above copyright notice and this permission notice shall be included in all c
 </body>
   <!--   Core JS Files   -->
 <body th:replace="layout/layout :: import-script"></body>
+<body>
+<script>
+	$(document).ready(function(){
+		$(".selectFormCorp").change(function(){
+			if($(this).val() == "voobly"){
+				$("#formVoobly").show();
+				$("#formDE").hide();
+			}
+			else if($(this).val() == "DE"){
+				$("#formDE").show();
+				$("#formVoobly").hide();
+			}
+			else{
+				$("#formDE").hide();
+				$("#formVoobly").hide();
+			}
+		});
+	});
+</script>
+</body>
 
 </html>
