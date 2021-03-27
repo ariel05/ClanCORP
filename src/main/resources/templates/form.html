@@ -8,18 +8,13 @@
 </head>
 
 <body>
-<nav  th:replace="layout/layout :: vertical-navbar"></nav>
-  <div class="wrapper ">
-
-    <div class="main-panel">
       <!-- Navbar -->
+<nav  th:replace="layout/layout :: vertical-navbar"></nav>
       <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
+    <div class="main-panel">
+        <div class="col-md-10 offset-md-1 mt-2">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header">
                   <h4 class="card-title">Registro para Liga CORP</h4>
                   <p>Febrero 2021<br>
 					Bienvenido a la CORP LEAGUE, recuerda que los valores de esta liga es ejercitar la competitividad, buen ambiente y conocernos entre todos los miembros del clan. <br>
@@ -30,24 +25,31 @@
 				 </p>
                   <p class="card-category">Complete los datos según la plataforma en la que juega (Voobly o DE)</p>
                 </div>
-                <div class="card-body">
- 				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
- 				  <select name="cars" class="custom-select bmd-label-floating selectFormCorp">
-				    <option selected value="">Seleccione plataforma</option>
-				    <option value="voobly">Voobly</option>
-				    <option value="DE">Definitive Edition</option>
-				  </select>
-				<form id="formDE" style="display:none">
+                <div class="card-body row col-md-4">
+	 				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
+	 				<select name="cars" class="form-select selectFormCorp">
+					  <option selected value="">Seleccione plataforma</option>
+					  <option value="voobly">Voobly</option>
+					  <option value="DE">Definitive Edition</option>
+					</select>
+                </div>
+              </div>
+              <div class="card mt-2">
+				<form id="formDE" class="mt-2" style="display:none">
                     <div class="row">
                       <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">¿Cual es tu nick en el DE?</label>
-                          <input type="text" class="form-control" required>
+                        <div class="form-group row">
+                        	<div class="col-4">
+		                        <label class="form-label">¿Cual es tu nick en el DE?</label>
+                        	</div>
+                        	<div class="col-8">
+		                        <input type="text" class="form-control" required>
+                        	</div>
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
-		 				  <select name="cars" class="custom-select bmd-label-floating" required>
+		 				  <select name="cars" class="form-select" required>
 						    <option selected value="">Seleccione Liga según su rated</option>
 						    <option value="01">Liga MIlicia / Arquero 701 - 900</option>
 						    <option value="02">Liga Scout 901 - 1100</option>
@@ -59,21 +61,29 @@
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Teléfono</label>
-                          <input type="email" class="form-control" required>
+                        <div class="form-group row">
+                        	<div class="col-2">
+		                        <label class="form-label">Teléfono</label>
+                        	</div>
+                        	<div class="col-10">
+		                        <input type="email" class="form-control" required>
+                        	</div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-4">
                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Link de AOE2.net </label>
-                          <input type="text" class="form-control" required>
+                        <div class="form-group row">
+                        	<div class="col-2">
+		                        <label class="form-label">Link de AOE2.net </label>
+                        	</div>
+                        	<div class="col-10">
+		                        <input type="text" class="form-control" required>
+                        	</div>
                         </div>
                       </div>
                       <div class="col-md-6">
-                          <label class="bmd-label-floating">
+                          <label class="form-label">
                           	Tienes el tiempo suficiente para jugar la LIGA CORP, 
                           	asumiendo que debes jugar 3 partidas por jugador (media 18 - 24 games en un lapso de 3 semanas)
                           	 Esto es un compromiso con apercibimiento de suspensión en caso de no jugar el 70% de las partidas.
@@ -97,7 +107,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-10 offset-md-1">
                         <div class="form-group">
                           <label>Opinión personal</label>
                           <div class="form-group">
@@ -107,25 +117,30 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Registrarme</button>
-                    <div class="clearfix"></div>
+                    <div class="text-center mb-4 mt-4">
+	                    <button type="submit" class="btn btn-primary">Registrarme</button>
+                    </div>
                   </form>
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
-				<form id="formVoobly" style="display:none">
+				<form id="formVoobly" class="mt-2">
                     <div class="row">
                       <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">¿Cual es tu nick en voobly?</label>
-                          <input type="text" class="form-control" required>
+                        <div class="form-group row">
+	                        <div class="col-md-5">
+		                        <label class="form-label">¿Cual es tu nick en voobly?</label>
+	                        </div>
+	                        <div class="col-md-7">
+		                        <input type="text" class="form-control" required>
+	                        </div>
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
-		 				  <select name="cars" class="custom-select bmd-label-floating" required>
+		 				  <select name="cars" class="form-select" required>
 						    <option selected value="">Seleccione Liga según su rated</option>
 						    <option value="01">Liga Scout 13++/o menos</option>
 						    <option value="02">Liga Jinete 14++</option>
@@ -134,21 +149,29 @@
                         </div>
                       </div>
                       <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Teléfono</label>
-                          <input type="email" class="form-control" required>
+                        <div class="form-group row">
+	                        <div class="col-md-3">
+        		                <label class="form-label">Teléfono</label>
+	                        </div>
+	                        <div class="col-md-9">
+		                        <input type="email" class="form-control" required>
+	                        </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-4">
                       <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Link de tu perfil de voobly (Ej. https://www.voobly.com/profile/view/124734139)</label>
-                          <input type="text" class="form-control" required>
+                        <div class="form-group row">
+	                        <div class="col-md-6">
+		                        <label class="bmd-label-floating">Link de tu perfil de voobly (Ej. https://www.voobly.com/profile/view/124734139)</label>
+	                        </div>
+	                        <div class="col-md-6">
+		                        <input type="text" class="form-control" required>
+	                        </div>
                         </div>
                       </div>
                       <div class="col-md-6">
-                          <label class="bmd-label-floating">
+                          <label class="form-label">
 							¿Te comprometes a jugar todos tus juegos y partidas, como también te comprometes a jugar honrada y 
 							respetuosamente como integrante del Clan Corp? <br>
 							Si eres nuevo en al liga y te comprometiste a jugar pero no lo cumples, es probable que seas penalizado
@@ -162,7 +185,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-10 offset-md-1">
                         <div class="form-group">
                           <label>Opinión personal</label>
                           <div class="form-group">
@@ -172,15 +195,13 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Registrarme</button>
-                    <div class="clearfix"></div>
+                    <div class="text-center mb-4 mt-4">
+	                    <button type="submit" class="btn btn-primary">Registrarme</button>
+                    </div>
                   </form>
-                </div>
-              </div>
-            </div>
+			</div>
           </div>
         </div>
-      </div>
 
 	<div class="container mt-3">
 	  <h2>Modal Example</h2>
@@ -223,8 +244,6 @@
 	  </div>
 	  
 	</div>
-    </div>
-  </div>
 
 </body>
   <!--   Core JS Files   -->
