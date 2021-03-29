@@ -12,7 +12,7 @@
 <nav  th:replace="layout/layout :: vertical-navbar"></nav>
       <!-- End Navbar -->
     <div class="main-panel">
-        <div class="col-md-10 offset-md-1 mt-2">
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 mt-4">
               <div class="card">
                 <div class="card-header">
                   <h4 class="card-title">Registro para Liga CORP</h4>
@@ -25,97 +25,83 @@
 				 </p>
                   <p class="card-category">Complete los datos según la plataforma en la que juega (Voobly o DE)</p>
                 </div>
-                <div class="card-body row col-md-4">
-	 				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
-	 				<select name="cars" class="form-select selectFormCorp">
-					  <option selected value="">Seleccione plataforma</option>
-					  <option value="voobly">Voobly</option>
-					  <option value="DE">Definitive Edition</option>
-					</select>
+                <div class="card-body row">
+                	<div class="col-lg-4 col-md-12">
+		 				<label for="customRange">Elija la plataforma en la que juega (Voobly o DE)</label>
+	 				</div>
+                	<div class="col-lg-8 col-md-12">
+		 				<select name="cars" class="form-select selectFormCorp">
+						  <option selected value="">Seleccione plataforma</option>
+						  <option value="voobly">Voobly</option>
+						  <option value="DE">Definitive Edition</option>
+						</select>
+	 				</div>
                 </div>
               </div>
               <div class="card mt-2">
-				<form id="formDE" class="mt-2" style="display:none">
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group row">
-                        	<div class="col-4">
-		                        <label class="form-label">¿Cual es tu nick en el DE?</label>
-                        	</div>
-                        	<div class="col-8">
-		                        <input type="text" class="form-control" required>
-                        	</div>
-                        </div>
+				<form id="formDE" class="mt-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1" style="display:none">
+                     <div class="form-group row">
+                     	<div class="col-lg-5">
+                       <label class="form-label">¿Cual es tu nick en el DE?</label>
+                     	</div>
+                     	<div class="col-lg-7">
+                       <input type="text" class="form-control" required>
+                     	</div>
+                     </div>
+                     <div class="form-group mt-4">
+	 				  <select name="cars" class="form-select" required>
+					    <option selected value="">Seleccione Liga según su rated</option>
+					    <option value="01">Liga MIlicia / Arquero 701 - 900</option>
+					    <option value="02">Liga Scout 901 - 1100</option>
+					    <option value="03">Liga Ballestero 1101 - 1200</option>
+					    <option value="04">Liga Jinete 1201 - 1300</option>
+					    <option value="05">Liga Arbalesta 1301 - 1500</option>
+					    <option value="06">Liga Paladin 15++/en adelante</option>
+					  </select>
+                     </div>
+                     <div class="form-group row mt-4">
+                     	<div class="col-lg-2 col-md-12">
+                       <label class="form-label">Teléfono</label>
+                     	</div>
+                     	<div class="col-lg-10 col-md-12">
+                       <input type="email" class="form-control" required>
+                     	</div>
+                     </div>
+                      <div class="	row mt-4 form-group">
+                       	<div class="col-lg-4 col-md-12">
+	                        <label class="form-label">Link de AOE2.net </label>
+                       	</div>
+                       	<div class="col-lg-8 col-md-12">
+	                        <input type="text" class="form-control" required>
+                       	</div>
                       </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-		 				  <select name="cars" class="form-select" required>
-						    <option selected value="">Seleccione Liga según su rated</option>
-						    <option value="01">Liga MIlicia / Arquero 701 - 900</option>
-						    <option value="02">Liga Scout 901 - 1100</option>
-						    <option value="03">Liga Ballestero 1101 - 1200</option>
-						    <option value="04">Liga Jinete 1201 - 1300</option>
-						    <option value="05">Liga Arbalesta 1301 - 1500</option>
-						    <option value="06">Liga Paladin 15++/en adelante</option>
-						  </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group row">
-                        	<div class="col-2">
-		                        <label class="form-label">Teléfono</label>
-                        	</div>
-                        	<div class="col-10">
-		                        <input type="email" class="form-control" required>
-                        	</div>
-                        </div>
-                      </div>
+                      <div class="mt-4">
+                         <label class="form-label col-12">
+                         	Tienes el tiempo suficiente para jugar la LIGA CORP, 
+                         	asumiendo que debes jugar 3 partidas por jugador (media 18 - 24 games en un lapso de 3 semanas)
+                         	 Esto es un compromiso con apercibimiento de suspensión en caso de no jugar el 70% de las partidas.
+                         </label>
+                         <div class="mt-1 text-center">
+						<div class="form-check form-check-inline">
+							<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
+						</div>
+                    	</div>
                     </div>
-                    <div class="row mt-4">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                        	<div class="col-2">
-		                        <label class="form-label">Link de AOE2.net </label>
-                        	</div>
-                        	<div class="col-10">
-		                        <input type="text" class="form-control" required>
-                        	</div>
+                    <div class="mt-4">
+                        <label class="form-label col-12">Instructivo para conseguir links de perfiles de <a href="https://aoe2.net/#aoe2de-leaderboard-rm-1v1" target="blank">https://aoe2.net/#aoe2de-leaderboard-rm-1v1</a></label>
+                        <div class="form-group col-12">
+							<img src="img/instructivo.png" alt="Logo CORP" class="rounded col-12">
                         </div>
-                      </div>
-                      <div class="col-md-6">
-                          <label class="form-label">
-                          	Tienes el tiempo suficiente para jugar la LIGA CORP, 
-                          	asumiendo que debes jugar 3 partidas por jugador (media 18 - 24 games en un lapso de 3 semanas)
-                          	 Esto es un compromiso con apercibimiento de suspensión en caso de no jugar el 70% de las partidas.
-                          </label><br>
-							<div class="form-check form-check-inline">
-								<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
-							</div>
-                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
+                    <div class="form-group mt-4">
+                        <label class="form-label">Opinión personal</label>
                         <div class="form-group">
-                          <label>Instructivo para conseguir links de perfiles de <a href="https://aoe2.net/#aoe2de-leaderboard-rm-1v1" target="blank">https://aoe2.net/#aoe2de-leaderboard-rm-1v1</a></label>
-                          <div class="form-group">
-							<img src="img/instructivo.png" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
-                          </div>
+                          <label class="form-label"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
+                          <textarea class="form-control" rows="5"></textarea>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-10 offset-md-1">
-                        <div class="form-group">
-                          <label>Opinión personal</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
-                            <textarea class="form-control" rows="5"></textarea>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div class="text-center mb-4 mt-4">
 	                    <button type="submit" class="btn btn-primary">Registrarme</button>
@@ -126,77 +112,65 @@
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
                   <!-- ----------------------------------------------------------------------------------------- -->
-				<form id="formVoobly" class="mt-2">
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group row">
-	                        <div class="col-md-5">
-		                        <label class="form-label">¿Cual es tu nick en voobly?</label>
-	                        </div>
-	                        <div class="col-md-7">
-		                        <input type="text" class="form-control" required>
-	                        </div>
-                        </div>
+				<form id="formVoobly" class="mt-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                     <div class="form-group row">
+                      <div class="col-lg-5 col-md-12">
+                       <label class="form-label">¿Cual es tu nick en voobly?</label>
                       </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-		 				  <select name="cars" class="form-select" required>
-						    <option selected value="">Seleccione Liga según su rated</option>
-						    <option value="01">Liga Scout 13++/o menos</option>
-						    <option value="02">Liga Jinete 14++</option>
-						    <option value="03">Liga Paladin 16++/en adelante</option>
-						  </select>
-                        </div>
+                      <div class="col-lg-7 col-md-12">
+                       <input type="text" class="form-control" required>
                       </div>
-                      <div class="col-md-4">
-                        <div class="form-group row">
-	                        <div class="col-md-3">
-        		                <label class="form-label">Teléfono</label>
-	                        </div>
-	                        <div class="col-md-9">
-		                        <input type="email" class="form-control" required>
-	                        </div>
-                        </div>
+                     </div>
+                      <div class="form-group mt-4">
+	 				  <select name="cars" class="form-select" required>
+					    <option selected value="">Seleccione Liga según su rated</option>
+					    <option value="01">Liga Scout 13++/o menos</option>
+					    <option value="02">Liga Jinete 14++</option>
+					    <option value="03">Liga Paladin 16++/en adelante</option>
+					  </select>
                       </div>
+                      <div class="form-group row mt-4">
+                       <div class="col-lg-3 col-md-12">
+      		                <label class="form-label">Teléfono</label>
+                       </div>
+                       <div class="col-lg-9 col-md-12">
+                        <input type="email" class="form-control" required>
+                       </div>
+                      </div>
+                    <div class="mt-4 form-group row">
+                        <div class="col-lg-8 col-sm-12">
+	                        <label class="form-label">Link de tu perfil de voobly (Ej. https://www.voobly.com/profile/view/124734139)</label>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+	                        <input type="text" class="form-control" required>
+                        </div>
                     </div>
-                    <div class="row mt-4">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-	                        <div class="col-md-6">
-		                        <label class="bmd-label-floating">Link de tu perfil de voobly (Ej. https://www.voobly.com/profile/view/124734139)</label>
-	                        </div>
-	                        <div class="col-md-6">
-		                        <input type="text" class="form-control" required>
-	                        </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                          <label class="form-label">
-							¿Te comprometes a jugar todos tus juegos y partidas, como también te comprometes a jugar honrada y 
-							respetuosamente como integrante del Clan Corp? <br>
-							Si eres nuevo en al liga y te comprometiste a jugar pero no lo cumples, es probable que seas penalizado
-                          </label><br>
-							<div class="form-check form-check-inline">
-								<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
-							</div>
-                      </div>
-                    </div>
+                     <div class="mt-4">
+                         <label class="form-label col-lg-12">
+						¿Te comprometes a jugar todos tus juegos y partidas, como también te comprometes a jugar honrada y 
+						respetuosamente como integrante del Clan Corp? <br>
+						Si eres nuevo en al liga y te comprometiste a jugar pero no lo cumples, es probable que seas penalizado
+                         </label><br>
+                         <div class="mt-1 text-center">
+						<div class="form-check form-check-inline">
+							<label class="radio-inline"><input type="radio" value="1" name="optradio">Si</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="radio-inline"><input type="radio"value="0" name="optradio">No</label>
+						</div>
+					  </div>
+                     </div>
                     <div class="row">
-                      <div class="col-md-10 offset-md-1">
-                        <div class="form-group">
-                          <label>Opinión personal</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
-                            <textarea class="form-control" rows="5"></textarea>
-                          </div>
-                        </div>
-                      </div>
+                       <div class="form-group">
+                         <label class="form-label">Opinión personal</label>
+                         <div class="form-group">
+                           <label class="bmd-label-floating"> ¿Tienes alguna recomendación/sugerencia sobre la liga y su desarrollo? TU OPINION VALE MUCHO!! *</label>
+                           <textarea class="form-control" rows="5"></textarea>
+                         </div>
+                       </div>
                     </div>
                     <div class="text-center mb-4 mt-4">
-	                    <button type="submit" class="btn btn-primary">Registrarme</button>
+	                    <button type="button" class="btn btn-primary">Registrarme</button>
                     </div>
                   </form>
 			</div>
@@ -204,21 +178,19 @@
         </div>
 
 	<div class="container mt-3">
-	  <h2>Modal Example</h2>
-	  <!-- Button to Open the Modal -->
-	  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-	    Open modal
-	  </button>
-	
+<!--  	  <h2>Modal Example</h2>
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+		  Launch demo modal
+		</button>	-->
 	  <!-- The Modal -->
-	  <div class="modal fade" id="myModal">
+	  <div class="modal fade" id="myModal"  tabindex="-1" aria-labelledby="modalLabelTitle" aria-hidden="true">
 	    <div class="modal-dialog">
 	      <div class="modal-content">
 	      
 	        <!-- Modal Header -->
 	        <div class="modal-header">
-	          <h4 class="modal-title">Registro completo</h4>
-	          <button type="button" class="close" data-dismiss="modal">×</button>
+	          <h4 class="modal-title" id="modalLabelTitle">Registro completo</h4>
+	          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	        </div>
 	        
 	        <!-- Modal body -->
@@ -230,13 +202,13 @@
 						 https://www.youtube.com/watch?v=N9EvOHcYfdw - Estate atento! 
 						 Recibirás un la información sobre las brackets y el reglamento en los próximos días. GGWP GL HF!
 					</p>
-					<img src="img/liga-logo.jpg" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
-					<img src="img/liga-logo-voobly.png" alt="Logo CORP" class="rounded col-md-6 offset-md-3">
+					<img src="img/liga-logo.jpg" alt="Logo CORP" class="rounded col-lg-6 offset-lg-3">
+					<img src="img/liga-logo-voobly.png" alt="Logo CORP" class="rounded col-lg-6 offset-lg-3">
 	        </div>
 	        
 	        <!-- Modal footer -->
 	        <div class="modal-footer">
-	          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 	        </div>
 	        
 	      </div>
@@ -244,7 +216,7 @@
 	  </div>
 	  
 	</div>
-
+	<div th:replace="layout/layout :: footer-f"></div>
 </body>
   <!--   Core JS Files   -->
 <body th:replace="layout/layout :: import-script"></body>
