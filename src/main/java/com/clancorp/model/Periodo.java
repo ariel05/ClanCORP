@@ -1,7 +1,6 @@
 package com.clancorp.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -10,8 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 public class Periodo implements Serializable{
@@ -28,8 +25,7 @@ public class Periodo implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "periodo")
 	private List<Liga> ligas;
 	
-	@Temporal(TemporalType.DATE)
-	private Date periodo;
+	private String periodo;
 
 	public Integer getId() {
 		return id;
@@ -47,11 +43,11 @@ public class Periodo implements Serializable{
 		this.ligas = ligas;
 	}
 
-	public Date getPeriodo() {
+	public String getPeriodo() {
 		return periodo;
 	}
 
-	public void setPeriodo(Date periodo) {
+	public void setPeriodo(String periodo) {
 		this.periodo = periodo;
 	}
 }

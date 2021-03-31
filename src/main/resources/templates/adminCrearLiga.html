@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="layout/layout :: head"></head>
+<head>
+	<meta charset="utf-8" />
+	<title>Admin panel Corp</title>
+</head>
+
+<body>
+<nav  th:replace="layout/layout :: vertical-navbar"></nav>
+	<div class="card col-md-6 offset-md-3 mt-4">
+		<h1 class="text-center">Clan Corporacion Magios AOE - Sección de administrador</h1>
+	</div>
+	<div class="contenido-principal col-md-10 offset-md-1 row text-center mt-2 card">
+		<form id="formVoobly" class="mt-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+			<div class="form-group mt-4 col-lg-5">
+				<select name="cars" class="form-select" required>
+					<option value="" selected>Seleccione el periodo</option>
+					<option th:each="periodos : ${periodos}" th:value="${periodos}" th:text="${periodos}"></option>
+				</select>
+			</div>
+		</form>
+	</div>
+
+	<div th:replace="layout/layout :: footer-f"></div>
+</body>
+  <!--   Core JS Files   -->
+<body th:replace="layout/layout :: import-script"></body>
+
+</html>

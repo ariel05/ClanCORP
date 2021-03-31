@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="layout/layout :: head"></head>
+<head>
+	<meta charset="utf-8" />
+	<title>Admin panel Corp</title>
+</head>
+
+<body>
+<nav  th:replace="layout/layout :: vertical-navbar"></nav>
+	<div class="card col-md-6 offset-md-3 mt-4">
+		<h1 class="text-center">Clan Corporacion Magios AOE - Sección de administrador</h1>
+	</div>
+	<div class="contenido-principal col-md-10 offset-md-1 row text-center mt-2 card">
+		<div class="row">
+		</div>
+	</div>
+
+	<div th:replace="layout/layout :: footer-f"></div>
+</body>
+  <!--   Core JS Files   -->
+<body th:replace="layout/layout :: import-script"></body>
+
+</html>
